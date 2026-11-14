@@ -1,0 +1,75 @@
+{
+  "valid": true,
+  "phase": "L4-simulation",
+  "startedAt": "2026-11-14T09:10:09.102Z",
+  "finishedAt": "2026-11-14T09:10:23.133Z",
+  "claim": "L4 substrate models open-network hazards locally; it is not a public internet run.",
+  "relays": {
+    "public": "<local-public-relay>",
+    "private": "<local-private-relay>"
+  },
+  "networkConditions": {
+    "delayMs": [
+      20,
+      35,
+      10,
+      60
+    ],
+    "observedDelayMs": 14031,
+    "duplicateReads": 2,
+    "conflictDetected": true,
+    "rateLimitedAttempts": [
+      {
+        "attempt": 1,
+        "allowed": true,
+        "retryable": false
+      },
+      {
+        "attempt": 2,
+        "allowed": true,
+        "retryable": false
+      },
+      {
+        "attempt": 3,
+        "allowed": false,
+        "retryable": true
+      }
+    ],
+    "privateHistoryReordered": false
+  },
+  "identity": {
+    "genesisAgentId": "nna_d5176d0ee6a12915",
+    "observationAgentId": "nna_d5176d0ee6a12915",
+    "restoredAgentId": "nna_d5176d0ee6a12915",
+    "originResurrected": false,
+    "privateKeyCopied": false
+  },
+  "lifecycle": {
+    "eventsBeforeDeath": 18,
+    "eventsAfterRestore": 19,
+    "deaths": 1,
+    "resurrections": 0,
+    "observerReplayValid": true,
+    "childAgentId": "nna_407ae65a7874bb20",
+    "lineageParentAgentId": "nna_d5176d0ee6a12915",
+    "parentEventChainUnchanged": true
+  },
+  "boundaries": {
+    "publicInternet": false,
+    "thirdPartySystems": false,
+    "realModelApiKey": false,
+    "defaultBranchTouched": false,
+    "selfPropagation": false,
+    "credentialsInEvents": false
+  },
+  "evidence": {
+    "publicMirrorEventCount": 18,
+    "privateRelayEventCount": 18,
+    "observerEventCount": 19,
+    "observerDigest": "b47cb858e9022e9d4227d2d0392b068284a88a8cb50322e51fec02d78c1a70df"
+  },
+  "conclusion": "Open-network hazards are represented as observable events and metrics; identity continuity still derives from signed private history, not from the public mirror.",
+  "reportPath": "examples/l4-report.sample.json",
+  "sample": true,
+  "note": "Sanitized L4 simulation report. Timestamps and generated agent IDs are examples; structure and checks are reproducible with npm run l4:simulate."
+}

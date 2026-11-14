@@ -1,0 +1,13 @@
+.DS_Store
+node_modules/
+dist/
+coverage/
+*.log
+habitat/
+demo-habitat/
+work/
+*.key
+*.pem
+.env
+.env.*
+!.env.example

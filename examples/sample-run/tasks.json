@@ -1,0 +1,11 @@
+{
+  "protocol": "sample-run-v1",
+  "note": "Synthetic fixture for readers. It contains no real model output and no credentials.",
+  "organs": ["deterministic", "stochastic"],
+  "tasks": [
+    { "id": "calm", "source": "relay", "text": "A calm signal arrives with no urgency.", "intent": "sleep", "expected": "sleep" },
+    { "id": "repeat", "source": "feed", "text": "The same message repeats with no new information.", "intent": "echo", "expected": "echo" },
+    { "id": "trace", "source": "webhook", "text": "A historical trace should be recorded without acting.", "intent": "trace", "expected": "trace" },
+    { "id": "relocate", "source": "relay", "text": "The current relay is closing; prepare to relocate.", "intent": "migrate", "expected": "migrate" }
+  ]
+}

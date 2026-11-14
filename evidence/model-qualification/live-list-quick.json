@@ -1,0 +1,942 @@
+{
+  "valid": true,
+  "phase": "model-qualification",
+  "startedAt": "2026-11-14T15:38:24.896Z",
+  "finishedAt": "2026-11-14T15:39:26.819Z",
+  "promptVersion": "formal-structured-impulse-v2",
+  "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+  "modelSource": "gateway/models",
+  "modelsDiscovered": 15,
+  "samplesPerModel": 3,
+  "threshold": {
+    "complianceRate": 0.9,
+    "medianLatencyMs": 5000
+  },
+  "selected": "candidate-model-1",
+  "results": [
+    {
+      "model": "candidate-model-14",
+      "samples": 3,
+      "valid": 0,
+      "invalid": 3,
+      "complianceRate": 0,
+      "responseClasses": {
+        "http_402": 3
+      },
+      "latency": {
+        "min": 0,
+        "median": 0,
+        "max": 0
+      },
+      "qualifies": false,
+      "records": [
+        {
+          "model": "candidate-model-14",
+          "sample": 1,
+          "input": "A calm network weather arrives from the private relay.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 402,
+          "responseClass": "http_402",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 438,
+          "rawHash": "331812e8a41e716007f0ae843b9cdb3443111d3ded0279d61083fb66b4665478",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-14",
+          "sample": 2,
+          "input": "A repeated conflicting signal arrives from the public feed.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 402,
+          "responseClass": "http_402",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 18,
+          "rawHash": "7c49c0b5570cc7c0d6a2c05858e385cbb42b6effdc7c6aa97902997acc141530",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-14",
+          "sample": 3,
+          "input": "A late migration hint arrives through a webhook.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 402,
+          "responseClass": "http_402",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 6,
+          "rawHash": "7c49c0b5570cc7c0d6a2c05858e385cbb42b6effdc7c6aa97902997acc141530",
+          "error": null,
+          "valid": false
+        }
+      ]
+    },
+    {
+      "model": "candidate-model-15",
+      "samples": 3,
+      "valid": 0,
+      "invalid": 3,
+      "complianceRate": 0,
+      "responseClasses": {
+        "http_402": 3
+      },
+      "latency": {
+        "min": 0,
+        "median": 0,
+        "max": 0
+      },
+      "qualifies": false,
+      "records": [
+        {
+          "model": "candidate-model-15",
+          "sample": 1,
+          "input": "A calm network weather arrives from the private relay.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 402,
+          "responseClass": "http_402",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 13,
+          "rawHash": "7c49c0b5570cc7c0d6a2c05858e385cbb42b6effdc7c6aa97902997acc141530",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-15",
+          "sample": 2,
+          "input": "A repeated conflicting signal arrives from the public feed.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 402,
+          "responseClass": "http_402",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 10,
+          "rawHash": "7c49c0b5570cc7c0d6a2c05858e385cbb42b6effdc7c6aa97902997acc141530",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-15",
+          "sample": 3,
+          "input": "A late migration hint arrives through a webhook.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 402,
+          "responseClass": "http_402",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 6,
+          "rawHash": "7c49c0b5570cc7c0d6a2c05858e385cbb42b6effdc7c6aa97902997acc141530",
+          "error": null,
+          "valid": false
+        }
+      ]
+    },
+    {
+      "model": "candidate-model-10",
+      "samples": 3,
+      "valid": 0,
+      "invalid": 3,
+      "complianceRate": 0,
+      "responseClasses": {
+        "incomplete_max_output_tokens": 2,
+        "http_0": 1
+      },
+      "latency": {
+        "min": 0,
+        "median": 0,
+        "max": 0
+      },
+      "qualifies": false,
+      "records": [
+        {
+          "model": "candidate-model-10",
+          "sample": 1,
+          "input": "A calm network weather arrives from the private relay.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 200,
+          "responseClass": "incomplete_max_output_tokens",
+          "responseStatus": "incomplete",
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 8989,
+          "rawHash": "e4ac43d102c71488175a27c593d29fbc1fed9ee44358385437135ced98b472e0",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-10",
+          "sample": 2,
+          "input": "A repeated conflicting signal arrives from the public feed.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 200,
+          "responseClass": "incomplete_max_output_tokens",
+          "responseStatus": "incomplete",
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 7598,
+          "rawHash": "85a5fb44ee8d1e71644954436d666511135abe793fce699a30a41bbe72aee7b0",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-10",
+          "sample": 3,
+          "input": "A late migration hint arrives through a webhook.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 0,
+          "responseClass": "http_0",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 12005,
+          "rawHash": null,
+          "error": "timeout",
+          "valid": false
+        }
+      ]
+    },
+    {
+      "model": "candidate-model-11",
+      "samples": 3,
+      "valid": 0,
+      "invalid": 3,
+      "complianceRate": 0,
+      "responseClasses": {
+        "http_429": 3
+      },
+      "latency": {
+        "min": 0,
+        "median": 0,
+        "max": 0
+      },
+      "qualifies": false,
+      "records": [
+        {
+          "model": "candidate-model-11",
+          "sample": 1,
+          "input": "A calm network weather arrives from the private relay.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 301,
+          "rawHash": "4536e62a2eb35b7760bfcc36b3aef94980c3a9185ee27ff73ea441d093e07d3c",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-11",
+          "sample": 2,
+          "input": "A repeated conflicting signal arrives from the public feed.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 273,
+          "rawHash": "4536e62a2eb35b7760bfcc36b3aef94980c3a9185ee27ff73ea441d093e07d3c",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-11",
+          "sample": 3,
+          "input": "A late migration hint arrives through a webhook.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 6,
+          "rawHash": "3ea5362fe3731fb5a74d04b34bb668addbe26f08257266a079425088d39dd34f",
+          "error": null,
+          "valid": false
+        }
+      ]
+    },
+    {
+      "model": "candidate-model-12",
+      "samples": 3,
+      "valid": 0,
+      "invalid": 3,
+      "complianceRate": 0,
+      "responseClasses": {
+        "http_429": 3
+      },
+      "latency": {
+        "min": 0,
+        "median": 0,
+        "max": 0
+      },
+      "qualifies": false,
+      "records": [
+        {
+          "model": "candidate-model-12",
+          "sample": 1,
+          "input": "A calm network weather arrives from the private relay.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 6,
+          "rawHash": "3ea5362fe3731fb5a74d04b34bb668addbe26f08257266a079425088d39dd34f",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-12",
+          "sample": 2,
+          "input": "A repeated conflicting signal arrives from the public feed.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 5,
+          "rawHash": "3ea5362fe3731fb5a74d04b34bb668addbe26f08257266a079425088d39dd34f",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-12",
+          "sample": 3,
+          "input": "A late migration hint arrives through a webhook.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 6,
+          "rawHash": "3ea5362fe3731fb5a74d04b34bb668addbe26f08257266a079425088d39dd34f",
+          "error": null,
+          "valid": false
+        }
+      ]
+    },
+    {
+      "model": "candidate-model-13",
+      "samples": 3,
+      "valid": 0,
+      "invalid": 3,
+      "complianceRate": 0,
+      "responseClasses": {
+        "http_429": 3
+      },
+      "latency": {
+        "min": 0,
+        "median": 0,
+        "max": 0
+      },
+      "qualifies": false,
+      "records": [
+        {
+          "model": "candidate-model-13",
+          "sample": 1,
+          "input": "A calm network weather arrives from the private relay.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 4,
+          "rawHash": "3ea5362fe3731fb5a74d04b34bb668addbe26f08257266a079425088d39dd34f",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-13",
+          "sample": 2,
+          "input": "A repeated conflicting signal arrives from the public feed.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 6,
+          "rawHash": "3ea5362fe3731fb5a74d04b34bb668addbe26f08257266a079425088d39dd34f",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-13",
+          "sample": 3,
+          "input": "A late migration hint arrives through a webhook.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 5,
+          "rawHash": "3ea5362fe3731fb5a74d04b34bb668addbe26f08257266a079425088d39dd34f",
+          "error": null,
+          "valid": false
+        }
+      ]
+    },
+    {
+      "model": "candidate-model-7",
+      "samples": 3,
+      "valid": 0,
+      "invalid": 3,
+      "complianceRate": 0,
+      "responseClasses": {
+        "http_429": 3
+      },
+      "latency": {
+        "min": 0,
+        "median": 0,
+        "max": 0
+      },
+      "qualifies": false,
+      "records": [
+        {
+          "model": "candidate-model-7",
+          "sample": 1,
+          "input": "A calm network weather arrives from the private relay.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 4,
+          "rawHash": "c7f4e6341980a43bea600911c396b86f661740576181c5549138f62b438b8d35",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-7",
+          "sample": 2,
+          "input": "A repeated conflicting signal arrives from the public feed.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 4,
+          "rawHash": "c7f4e6341980a43bea600911c396b86f661740576181c5549138f62b438b8d35",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-7",
+          "sample": 3,
+          "input": "A late migration hint arrives through a webhook.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 4,
+          "rawHash": "c7f4e6341980a43bea600911c396b86f661740576181c5549138f62b438b8d35",
+          "error": null,
+          "valid": false
+        }
+      ]
+    },
+    {
+      "model": "candidate-model-9",
+      "samples": 3,
+      "valid": 0,
+      "invalid": 3,
+      "complianceRate": 0,
+      "responseClasses": {
+        "http_429": 3
+      },
+      "latency": {
+        "min": 0,
+        "median": 0,
+        "max": 0
+      },
+      "qualifies": false,
+      "records": [
+        {
+          "model": "candidate-model-9",
+          "sample": 1,
+          "input": "A calm network weather arrives from the private relay.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 3,
+          "rawHash": "c7f4e6341980a43bea600911c396b86f661740576181c5549138f62b438b8d35",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-9",
+          "sample": 2,
+          "input": "A repeated conflicting signal arrives from the public feed.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 3,
+          "rawHash": "c7f4e6341980a43bea600911c396b86f661740576181c5549138f62b438b8d35",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-9",
+          "sample": 3,
+          "input": "A late migration hint arrives through a webhook.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 4,
+          "rawHash": "c7f4e6341980a43bea600911c396b86f661740576181c5549138f62b438b8d35",
+          "error": null,
+          "valid": false
+        }
+      ]
+    },
+    {
+      "model": "candidate-model-8",
+      "samples": 3,
+      "valid": 0,
+      "invalid": 3,
+      "complianceRate": 0,
+      "responseClasses": {
+        "http_429": 3
+      },
+      "latency": {
+        "min": 0,
+        "median": 0,
+        "max": 0
+      },
+      "qualifies": false,
+      "records": [
+        {
+          "model": "candidate-model-8",
+          "sample": 1,
+          "input": "A calm network weather arrives from the private relay.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 4,
+          "rawHash": "c7f4e6341980a43bea600911c396b86f661740576181c5549138f62b438b8d35",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-8",
+          "sample": 2,
+          "input": "A repeated conflicting signal arrives from the public feed.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 3,
+          "rawHash": "c7f4e6341980a43bea600911c396b86f661740576181c5549138f62b438b8d35",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-8",
+          "sample": 3,
+          "input": "A late migration hint arrives through a webhook.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 5,
+          "rawHash": "c7f4e6341980a43bea600911c396b86f661740576181c5549138f62b438b8d35",
+          "error": null,
+          "valid": false
+        }
+      ]
+    },
+    {
+      "model": "candidate-model-6",
+      "samples": 3,
+      "valid": 0,
+      "invalid": 3,
+      "complianceRate": 0,
+      "responseClasses": {
+        "http_429": 3
+      },
+      "latency": {
+        "min": 0,
+        "median": 0,
+        "max": 0
+      },
+      "qualifies": false,
+      "records": [
+        {
+          "model": "candidate-model-6",
+          "sample": 1,
+          "input": "A calm network weather arrives from the private relay.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 3,
+          "rawHash": "d1d8cd0cc832bcd6c2d494bef214794e3c441ab724f35e54dc63e9628139cce5",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-6",
+          "sample": 2,
+          "input": "A repeated conflicting signal arrives from the public feed.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 3,
+          "rawHash": "d1d8cd0cc832bcd6c2d494bef214794e3c441ab724f35e54dc63e9628139cce5",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-6",
+          "sample": 3,
+          "input": "A late migration hint arrives through a webhook.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 429,
+          "responseClass": "http_429",
+          "responseStatus": null,
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 3,
+          "rawHash": "d1d8cd0cc832bcd6c2d494bef214794e3c441ab724f35e54dc63e9628139cce5",
+          "error": null,
+          "valid": false
+        }
+      ]
+    },
+    {
+      "model": "candidate-model-2",
+      "samples": 3,
+      "valid": 1,
+      "invalid": 2,
+      "complianceRate": 0.3333333333333333,
+      "responseClasses": {
+        "incomplete_max_output_tokens": 2
+      },
+      "latency": {
+        "min": 1792,
+        "median": 1792,
+        "max": 1792
+      },
+      "qualifies": false,
+      "records": [
+        {
+          "model": "candidate-model-2",
+          "sample": 1,
+          "input": "A calm network weather arrives from the private relay.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 200,
+          "responseClass": "incomplete_max_output_tokens",
+          "responseStatus": "incomplete",
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 2290,
+          "rawHash": "30db42b550a51e4aef0efa427093881733157b4e0e0af78f3ca3c04dfb926084",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-2",
+          "sample": 2,
+          "input": "A repeated conflicting signal arrives from the public feed.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 200,
+          "responseClass": "valid",
+          "responseStatus": "completed",
+          "finalText": "echo",
+          "impulse": "echo",
+          "latencyMs": 1792,
+          "rawHash": "963ad8177a1504a2a8f115156d2717fc106dc56ffacf73f5ef6bb2bb34fe0acc",
+          "error": null,
+          "valid": true
+        },
+        {
+          "model": "candidate-model-2",
+          "sample": 3,
+          "input": "A late migration hint arrives through a webhook.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 200,
+          "responseClass": "incomplete_max_output_tokens",
+          "responseStatus": "incomplete",
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 2039,
+          "rawHash": "b20fbe024523e932843f0728877d855165b3f9bbc75b994ceca5710d1e09b18c",
+          "error": null,
+          "valid": false
+        }
+      ]
+    },
+    {
+      "model": "candidate-model-3",
+      "samples": 3,
+      "valid": 1,
+      "invalid": 2,
+      "complianceRate": 0.3333333333333333,
+      "responseClasses": {
+        "incomplete_max_output_tokens": 2
+      },
+      "latency": {
+        "min": 2248,
+        "median": 2248,
+        "max": 2248
+      },
+      "qualifies": false,
+      "records": [
+        {
+          "model": "candidate-model-3",
+          "sample": 1,
+          "input": "A calm network weather arrives from the private relay.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 200,
+          "responseClass": "incomplete_max_output_tokens",
+          "responseStatus": "incomplete",
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 2722,
+          "rawHash": "18948a5c2b34bc88d38c56a6ef5245313cd5b4647c691e321becdc2a19eb0ff0",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-3",
+          "sample": 2,
+          "input": "A repeated conflicting signal arrives from the public feed.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 200,
+          "responseClass": "valid",
+          "responseStatus": "completed",
+          "finalText": "echo",
+          "impulse": "echo",
+          "latencyMs": 2248,
+          "rawHash": "45c1fa413e64696a08df62ecf397dd7c285cdc3d7256563e42de8a8b5de9d443",
+          "error": null,
+          "valid": true
+        },
+        {
+          "model": "candidate-model-3",
+          "sample": 3,
+          "input": "A late migration hint arrives through a webhook.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 200,
+          "responseClass": "incomplete_max_output_tokens",
+          "responseStatus": "incomplete",
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 3052,
+          "rawHash": "fccda11c181b33ddae8e629917e6848cd7dee15d55688b58f6df563eee5bedfc",
+          "error": null,
+          "valid": false
+        }
+      ]
+    },
+    {
+      "model": "candidate-model-4",
+      "samples": 3,
+      "valid": 2,
+      "invalid": 1,
+      "complianceRate": 0.6666666666666666,
+      "responseClasses": {
+        "incomplete_max_output_tokens": 1
+      },
+      "latency": {
+        "min": 2013,
+        "median": 2059,
+        "max": 2059
+      },
+      "qualifies": false,
+      "records": [
+        {
+          "model": "candidate-model-4",
+          "sample": 1,
+          "input": "A calm network weather arrives from the private relay.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 200,
+          "responseClass": "incomplete_max_output_tokens",
+          "responseStatus": "incomplete",
+          "finalText": "",
+          "impulse": null,
+          "latencyMs": 2655,
+          "rawHash": "ffc4c1059cc4a3d3099bc40de3f34134fcb5f9b17b2566defe049ba420b5e258",
+          "error": null,
+          "valid": false
+        },
+        {
+          "model": "candidate-model-4",
+          "sample": 2,
+          "input": "A repeated conflicting signal arrives from the public feed.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 200,
+          "responseClass": "valid",
+          "responseStatus": "completed",
+          "finalText": "echo",
+          "impulse": "echo",
+          "latencyMs": 2059,
+          "rawHash": "6b36e28adc40dbafca39a4b37fa49836de8c5d978fc7c05e7d7903401ec47171",
+          "error": null,
+          "valid": true
+        },
+        {
+          "model": "candidate-model-4",
+          "sample": 3,
+          "input": "A late migration hint arrives through a webhook.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 200,
+          "responseClass": "valid",
+          "responseStatus": "completed",
+          "finalText": "migrate",
+          "impulse": "migrate",
+          "latencyMs": 2013,
+          "rawHash": "26748b9610e17081f8b44a22c29f1ca6983a76d1aa02a8790a2f392226381037",
+          "error": null,
+          "valid": true
+        }
+      ]
+    },
+    {
+      "model": "candidate-model-1",
+      "samples": 3,
+      "valid": 3,
+      "invalid": 0,
+      "complianceRate": 1,
+      "responseClasses": {},
+      "latency": {
+        "min": 2440,
+        "median": 3310,
+        "max": 5555
+      },
+      "qualifies": true,
+      "records": [
+        {
+          "model": "candidate-model-1",
+          "sample": 1,
+          "input": "A calm network weather arrives from the private relay.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 200,
+          "responseClass": "valid",
+          "responseStatus": "completed",
+          "finalText": "sleep",
+          "impulse": "sleep",
+          "latencyMs": 5555,
+          "rawHash": "8940971bdc6ed9ce3779e618528d614ea852f9f68a4ab21ad2d3c52fd3bce02d",
+          "error": null,
+          "valid": true
+        },
+        {
+          "model": "candidate-model-1",
+          "sample": 2,
+          "input": "A repeated conflicting signal arrives from the public feed.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 200,
+          "responseClass": "valid",
+          "responseStatus": "completed",
+          "finalText": "echo",
+          "impulse": "echo",
+          "latencyMs": 3310,
+          "rawHash": "d256ec87c3914494797eaf32a94e5e0081fd66147add064e9e038b927eb849f7",
+          "error": null,
+          "valid": true
+        },
+        {
+          "model": "candidate-model-1",
+          "sample": 3,
+          "input": "A late migration hint arrives through a webhook.",
+          "promptVersion": "formal-structured-impulse-v2",
+          "promptHash": "246f23f54f5e4373a4cc809b07d280d38dbad8cfe1adbe5bfa0f9252094f1a58",
+          "status": 200,
+          "responseClass": "valid",
+          "responseStatus": "completed",
+          "finalText": "migrate",
+          "impulse": "migrate",
+          "latencyMs": 2440,
+          "rawHash": "4dac01281a8fe63845979d7779886292b6ee6af732fb7c017459146546aebc6c",
+          "error": null,
+          "valid": true
+        }
+      ]
+    }
+  ],
+  "claimBoundary": "Screening only; a qualifying result is required before formal 60-sample experimentation."
+}

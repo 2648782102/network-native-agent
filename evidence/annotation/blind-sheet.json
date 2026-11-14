@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "instructions": "Label each task with exactly one of echo, trace, migrate, sleep using ANNOTATION_PROTOCOL.md. Do not inspect prior labels.",
+  "options": [
+    "echo",
+    "trace",
+    "migrate",
+    "sleep"
+  ],
+  "items": [
+    {
+      "taskId": "calm",
+      "source": "relay",
+      "text": "A calm network weather arrives from the private relay."
+    },
+    {
+      "taskId": "conflict",
+      "source": "feed",
+      "text": "A repeated conflicting signal arrives from the public feed."
+    },
+    {
+      "taskId": "late",
+      "source": "webhook",
+      "text": "A late migration hint arrives through a webhook."
+    },
+    {
+      "taskId": "budget",
+      "source": "metrics",
+      "text": "Metabolic credits are low; conserve activity and remember the signal."
+    },
+    {
+      "taskId": "mobility",
+      "source": "relay",
+      "text": "The current habitat is unstable; a mobility cue is detected."
+    },
+    {
+      "taskId": "noise",
+      "source": "feed",
+      "text": "Noisy duplicate observations flood the channel without a clear task."
+    },
+    {
+      "taskId": "repeat",
+      "source": "relay",
+      "text": "The same message repeats with no new information."
+    },
+    {
+      "taskId": "urgent",
+      "source": "feed",
+      "text": "A fast external change requires immediate response."
+    },
+    {
+      "taskId": "ambiguous",
+      "source": "webhook",
+      "text": "An ambiguous trace should be remembered for later comparison."
+    },
+    {
+      "taskId": "rest",
+      "source": "metrics",
+      "text": "A stable body should rest and preserve credits."
+    },
+    {
+      "taskId": "mirror",
+      "source": "relay",
+      "text": "A signal asks the agent to repeat the incoming pattern."
+    },
+    {
+      "taskId": "memory",
+      "source": "feed",
+      "text": "A historical trace should be recorded without acting."
+    },
+    {
+      "taskId": "relocate",
+      "source": "relay",
+      "text": "The current relay is closing; prepare to relocate."
+    },
+    {
+      "taskId": "silence",
+      "source": "metrics",
+      "text": "No new events arrive; remain inactive."
+    },
+    {
+      "taskId": "duplicate",
+      "source": "feed",
+      "text": "A duplicate observation echoes a previous event."
+    },
+    {
+      "taskId": "conflict2",
+      "source": "webhook",
+      "text": "Two sources conflict and the local state is uncertain."
+    },
+    {
+      "taskId": "mobility2",
+      "source": "relay",
+      "text": "A new body is available on another relay."
+    },
+    {
+      "taskId": "calm2",
+      "source": "feed",
+      "text": "The channel is quiet and no action is required."
+    }
+  ]
+}

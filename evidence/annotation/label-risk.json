@@ -1,0 +1,164 @@
+{
+  "total": 18,
+  "contested": 4,
+  "unsupported": 5,
+  "items": [
+    {
+      "taskId": "calm",
+      "assigned": "sleep",
+      "cueFamilies": [
+        "sleep"
+      ],
+      "contested": false,
+      "assignedSupported": true
+    },
+    {
+      "taskId": "conflict",
+      "assigned": "migrate",
+      "cueFamilies": [
+        "echo"
+      ],
+      "contested": false,
+      "assignedSupported": false
+    },
+    {
+      "taskId": "late",
+      "assigned": "migrate",
+      "cueFamilies": [],
+      "contested": true,
+      "assignedSupported": false
+    },
+    {
+      "taskId": "budget",
+      "assigned": "sleep",
+      "cueFamilies": [
+        "trace",
+        "sleep"
+      ],
+      "contested": true,
+      "assignedSupported": true
+    },
+    {
+      "taskId": "mobility",
+      "assigned": "migrate",
+      "cueFamilies": [
+        "migrate"
+      ],
+      "contested": false,
+      "assignedSupported": true
+    },
+    {
+      "taskId": "noise",
+      "assigned": "trace",
+      "cueFamilies": [
+        "echo"
+      ],
+      "contested": false,
+      "assignedSupported": false
+    },
+    {
+      "taskId": "repeat",
+      "assigned": "echo",
+      "cueFamilies": [
+        "echo"
+      ],
+      "contested": false,
+      "assignedSupported": true
+    },
+    {
+      "taskId": "urgent",
+      "assigned": "migrate",
+      "cueFamilies": [],
+      "contested": true,
+      "assignedSupported": false
+    },
+    {
+      "taskId": "ambiguous",
+      "assigned": "trace",
+      "cueFamilies": [
+        "trace"
+      ],
+      "contested": false,
+      "assignedSupported": true
+    },
+    {
+      "taskId": "rest",
+      "assigned": "sleep",
+      "cueFamilies": [
+        "sleep"
+      ],
+      "contested": false,
+      "assignedSupported": true
+    },
+    {
+      "taskId": "mirror",
+      "assigned": "echo",
+      "cueFamilies": [
+        "echo"
+      ],
+      "contested": false,
+      "assignedSupported": true
+    },
+    {
+      "taskId": "memory",
+      "assigned": "trace",
+      "cueFamilies": [
+        "trace"
+      ],
+      "contested": false,
+      "assignedSupported": true
+    },
+    {
+      "taskId": "relocate",
+      "assigned": "migrate",
+      "cueFamilies": [
+        "migrate"
+      ],
+      "contested": false,
+      "assignedSupported": true
+    },
+    {
+      "taskId": "silence",
+      "assigned": "sleep",
+      "cueFamilies": [
+        "sleep"
+      ],
+      "contested": false,
+      "assignedSupported": true
+    },
+    {
+      "taskId": "duplicate",
+      "assigned": "echo",
+      "cueFamilies": [
+        "echo"
+      ],
+      "contested": false,
+      "assignedSupported": true
+    },
+    {
+      "taskId": "conflict2",
+      "assigned": "trace",
+      "cueFamilies": [],
+      "contested": true,
+      "assignedSupported": false
+    },
+    {
+      "taskId": "mobility2",
+      "assigned": "migrate",
+      "cueFamilies": [
+        "migrate"
+      ],
+      "contested": false,
+      "assignedSupported": true
+    },
+    {
+      "taskId": "calm2",
+      "assigned": "sleep",
+      "cueFamilies": [
+        "sleep"
+      ],
+      "contested": false,
+      "assignedSupported": true
+    }
+  ]
+}

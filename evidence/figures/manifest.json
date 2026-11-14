@@ -1,0 +1,49 @@
+{
+  "generatedAt": "2026-11-14T18:18:18.307Z",
+  "endpoint": "https://antv-studio.alipay.com/api/gpt-vis",
+  "figures": [
+    {
+      "name": "compliance-vs-intent",
+      "file": "evidence/figures/compliance-vs-intent.png",
+      "bytes": 114544,
+      "sha256": "4f00a5afa7dfda63eb807b2c583df593315486093f3029e702f67ec6885bd3ba",
+      "source": "https://mdn.alipayobjects.com/one_clip/afts/img/hY66RZyi9vwAAAAARwAAAAgAoEACAQFr/original"
+    },
+    {
+      "name": "impulse-distribution",
+      "file": "evidence/figures/impulse-distribution.png",
+      "bytes": 118427,
+      "sha256": "b225b9c08780529471edd3c297dd9af7f4656a7a1ca3285c745df49ab080567a",
+      "source": "https://mdn.alipayobjects.com/one_clip/afts/img/GncqSImnVIgAAAAAR0AAAAgAoEACAQFr/original"
+    },
+    {
+      "name": "qualification-outcome",
+      "file": "evidence/figures/qualification-outcome.png",
+      "bytes": 137486,
+      "sha256": "0165a68ff9a55f14115dec409bf978f4fd1b3a7beccdbdfb775722dade7f47f5",
+      "source": "https://mdn.alipayobjects.com/one_clip/afts/img/qrPIQIVNXpYAAAAASGAAAAgAoEACAQFr/original"
+    },
+    {
+      "name": "annotation-agreement",
+      "file": "evidence/figures/annotation-agreement.png",
+      "bytes": 82784,
+      "sha256": "e9a80a4f78709bf60dc3d07219bbee7681c17151188c6f0a4abf8a32c4516572",
+      "source": "https://mdn.alipayobjects.com/one_clip/afts/img/tGQ5QbUU6oAAAAAARRAAAAgAoEACAQFr/original"
+    },
+    {
+      "name": "latency-comparison",
+      "file": "evidence/figures/latency-comparison.png",
+      "bytes": 119800,
+      "sha256": "2d423aea425e311211d3ac207847432fabfd02daf4f2992d13fed1aabc9ae9d4",
+      "source": "https://mdn.alipayobjects.com/one_clip/afts/img/HDM4Qo3MEo8AAAAAR1AAAAgAoEACAQFr/original"
+    },
+    {
+      "name": "e2e-impulses",
+      "file": "evidence/figures/e2e-impulses.png",
+      "bytes": 184300,
+      "sha256": "ede3a656ce4ae15406201ae8ed54a69b1c515ec3653bb4d28c73ccd3be5e3ca2",
+      "source": "https://mdn.alipayobjects.com/one_clip/afts/img/Qq8qR608PEYAAAAAS0AAAAgAoEACAQFr/original"
+    }
+  ],
+  "note": "Generated from archived evidence; numeric values come from evidence/*.json, not hand-entered."
+}

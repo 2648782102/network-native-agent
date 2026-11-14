@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [20, 22, 24]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Show runtime
+        run: node --version
+      - name: Run checks
+        run: npm run check
+      - name: Audit public surface
+        run: npm run audit:public
+      - name: Check local test environment
+        run: |
+          npm run env:init
+          npm run env:check
+          npm run env:report
+          rm -rf work/test-env

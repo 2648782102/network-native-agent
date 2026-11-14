@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" role="img" aria-label="Formal experiment compliance chart">
+  <rect width="100%" height="100%" fill="#0d1117"/>
+  <text x="55" y="56" font-size="26" font-weight="700" fill="#e6edf3">正式实验：结构化响应合规率</text>
+  <text x="55" y="84" font-size="13" fill="#8b949e">180 条原始记录 · 180 条纳入 · 0 条排除 · Cramer's V 0.2433</text>
+  <rect x="35" y="110" width="830" height="360" rx="15" fill="#111820" stroke="#21262d"/>
+  <text x="55" y="140" font-size="18" font-weight="700" fill="#e6edf3">每种器官的纳入 / 总数</text>
+  <text x="55" y="187" font-size="17" fill="#e6edf3">确定性</text><text x="55" y="208" font-size="11" fill="#8b949e">deterministic</text><rect x="250" y="164" width="480" height="36" rx="8" fill="#21262d"/><rect x="250" y="164" width="480" height="36" rx="8" fill="#58a6ff"/><text x="735" y="189" font-size="14" font-weight="700" fill="#ffffff">60/60</text><text x="55" y="232" font-size="11" fill="#8b949e">合规率 1.000 · Wilson 95% [0.9398, 1] · 排除 0</text><text x="55" y="281" font-size="17" fill="#e6edf3">随机权重</text><text x="55" y="302" font-size="11" fill="#8b949e">stochastic</text><rect x="250" y="258" width="480" height="36" rx="8" fill="#21262d"/><rect x="250" y="258" width="480" height="36" rx="8" fill="#a371f7"/><text x="735" y="283" font-size="14" font-weight="700" fill="#ffffff">60/60</text><text x="55" y="326" font-size="11" fill="#8b949e">合规率 1.000 · Wilson 95% [0.9398, 1] · 排除 0</text><text x="55" y="375" font-size="17" fill="#e6edf3">候选模型</text><text x="55" y="396" font-size="11" fill="#8b949e">model</text><rect x="250" y="352" width="480" height="36" rx="8" fill="#21262d"/><rect x="250" y="352" width="480" height="36" rx="8" fill="#3fb950"/><text x="735" y="377" font-size="14" font-weight="700" fill="#ffffff">60/60</text><text x="55" y="420" font-size="11" fill="#8b949e">合规率 1.000 · Wilson 95% [0.9398, 1] · 排除 0</text>
+  <text x="55" y="505" font-size="13" fill="#8b949e">模型排除原因：无</text>
+  <text x="55" y="532" font-size="13" fill="#8b949e">结论边界：不把不完整响应折算为冲动；不评测智能、意识或意图。</text>
+  <text x="55" y="582" font-size="12" fill="#8b949e">协议：EXPERIMENT_PROTOCOL.md · 数据：evidence/formal-experiment/raw.ndjson</text>
+</svg>

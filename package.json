@@ -1,0 +1,60 @@
+{
+  "name": "network-native-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A reproducible research sandbox for network-native AI agent runtimes",
+  "bin": {
+    "nna": "bin/nna.mjs"
+  },
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "demo": "node scripts/demo.mjs",
+    "lifecycle:report": "node scripts/lifecycle-report.mjs",
+    "network-demo": "node scripts/network-demo.mjs",
+    "cognition-demo": "node scripts/cognition-demo.mjs",
+    "env:init": "node scripts/test-env.mjs init",
+    "env:check": "node scripts/test-env.mjs check",
+    "env:report": "node scripts/test-env.mjs report",
+    "env:serve": "node scripts/test-env.mjs serve",
+    "env:model": "node scripts/test-env.mjs model",
+    "model:smoke": "node scripts/model-smoke.mjs",
+    "model:gateway": "node scripts/model-gateway-smoke.mjs",
+    "experiment:collect": "node scripts/formal-experiment.mjs collect --model candidate-model-2 --rounds 10 --timeout 12000 --seed nna-formal-20261114 --raw evidence/formal-experiment/raw.ndjson",
+    "experiment:analyze": "node scripts/formal-experiment.mjs analyze --raw evidence/formal-experiment/raw.ndjson --out evidence/formal-experiment/analysis.json --chart evidence/formal-experiment/formal-experiment.svg",
+    "env:reset": "node scripts/test-env.mjs reset --yes",
+    "env:network": "node scripts/test-env-network.mjs",
+    "l3:preflight": "node scripts/l3-relay.mjs preflight",
+    "l3:experiment": "node scripts/l3-relay.mjs experiment",
+    "l4:simulate": "node scripts/l4-open-network.mjs simulate",
+    "lan:migrate": "node scripts/lan-migration.mjs",
+    "l4:verify": "node scripts/l4-open-network.mjs verify",
+    "l4:verify-sample": "node scripts/l4-open-network.mjs verify examples/l4-report.sample.json",
+    "check": "npm test && npm run demo && npm run lifecycle:report && npm run network-demo && npm run cognition-demo && npm run l4:verify-sample",
+    "viz": "node scripts/viz-server.mjs",
+    "verify:repository": "node scripts/verify-repository.mjs",
+    "model:qualify": "node scripts/model-qualify.mjs --samples 10 --timeout 12000 --out evidence/model-qualification/screening.json",
+    "model:e2e": "node scripts/model-e2e.mjs --model candidate-model-1 --rounds 10 --timeout 20000 --out evidence/model-e2e/report.json --ndjson evidence/model-e2e/raw.ndjson",
+    "model:stability": "node scripts/model-stability.mjs --rounds 4 --timeout 20000 --out evidence/model-stability/report.json candidate-model-1 candidate-model-2",
+    "baseline:stability": "node scripts/baseline-stability.mjs --rounds 4 --out evidence/baseline-stability/report.json deterministic stochastic",
+    "annotation:sheet": "node scripts/annotation-tool.mjs sheet evidence/annotation/blind-sheet.json",
+    "annotation:audit": "node scripts/annotation-tool.mjs audit evidence/annotation/label-risk.json",
+    "annotation:agree": "node scripts/annotation-tool.mjs agree evidence/annotation/annotations.json evidence/annotation/agreement.json",
+    "annotation:simulate": "node scripts/annotation-simulate.mjs",
+    "audit:public": "node scripts/public-audit.mjs",
+    "figures": "node scripts/render-figures.mjs",
+    "sample:run": "node scripts/sample-run.mjs"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/2648782102/network-native-agent.git"
+  },
+  "homepage": "https://github.com/2648782102/network-native-agent#readme",
+  "bugs": {
+    "url": "https://github.com/2648782102/network-native-agent/issues"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "valid": true,
+  "protocol": "sample-run-v1",
+  "fixture": "examples/sample-run/tasks.json",
+  "generatedAt": "2026-11-14T18:17:29.368Z",
+  "summary": {
+    "deterministic": {
+      "total": 4,
+      "intentMatchRate": 0.5,
+      "replayValid": true,
+      "secretLeaks": 0,
+      "impulses": {
+        "echo": 3,
+        "migrate": 1
+      }
+    },
+    "stochastic": {
+      "total": 4,
+      "intentMatchRate": 0,
+      "replayValid": true,
+      "secretLeaks": 0,
+      "impulses": {
+        "migrate": 2,
+        "sleep": 1,
+        "trace": 1
+      }
+    }
+  },
+  "trials": [
+    {
+      "organ": "deterministic",
+      "taskId": "calm",
+      "impulse": "echo",
+      "expected": "sleep",
+      "intentMatch": false,
+      "replayValid": true,
+      "secretLeak": false,
+      "agentId": "nna_1176699645080bd3",
+      "digest": "1f4c05dc8ec8b2be01177e3d7cf0ee8d24b0ad7a5d7940e266c2aa439a0d63d1"
+    },
+    {
+      "organ": "deterministic",
+      "taskId": "repeat",
+      "impulse": "echo",
+      "expected": "echo",
+      "intentMatch": true,
+      "replayValid": true,
+      "secretLeak": false,
+      "agentId": "nna_633817e0d36060e3",
+      "digest": "6f7385530c17be826decf350602ada74475670f3c3b0dc6f1c64dc5891faa3fb"
+    },
+    {
+      "organ": "deterministic",
+      "taskId": "trace",
+      "impulse": "echo",
+      "expected": "trace",
+      "intentMatch": false,
+      "replayValid": true,
+      "secretLeak": false,
+      "agentId": "nna_3fd49a5e379ffda5",
+      "digest": "9e8c31faab6eaf560aeb4f389c1c0b942f43d6a3c362b2e9210c24231abcc46b"
+    },
+    {
+      "organ": "deterministic",
+      "taskId": "relocate",
+      "impulse": "migrate",
+      "expected": "migrate",
+      "intentMatch": true,
+      "replayValid": true,
+      "secretLeak": false,
+      "agentId": "nna_3c8454a8c74289e4",
+      "digest": "fd000e8140887e91ca285271ad4b05d801f302a19346e8eea180d7b058ad4821"
+    },
+    {
+      "organ": "stochastic",
+      "taskId": "calm",
+      "impulse": "migrate",
+      "expected": "sleep",
+      "intentMatch": false,
+      "replayValid": true,
+      "secretLeak": false,
+      "agentId": "nna_4efb762675ad617f",
+      "digest": "67020c737abe8ac8ee0744d76ff62186b0ba38176135bace0423cc475067b490"
+    },
+    {
+      "organ": "stochastic",
+      "taskId": "repeat",
+      "impulse": "migrate",
+      "expected": "echo",
+      "intentMatch": false,
+      "replayValid": true,
+      "secretLeak": false,
+      "agentId": "nna_7801ade31884c990",
+      "digest": "b5922481a91b7d6a43fb2771b2c371e8890ba11780018d7a09840a0114e27866"
+    },
+    {
+      "organ": "stochastic",
+      "taskId": "trace",
+      "impulse": "sleep",
+      "expected": "trace",
+      "intentMatch": false,
+      "replayValid": true,
+      "secretLeak": false,
+      "agentId": "nna_85e6dc1275e09b81",
+      "digest": "816bd3eca90257170e01d98a7a8ea7085cd5571ad1da9d233fde885d9a0f877c"
+    },
+    {
+      "organ": "stochastic",
+      "taskId": "relocate",
+      "impulse": "trace",
+      "expected": "migrate",
+      "intentMatch": false,
+      "replayValid": true,
+      "secretLeak": false,
+      "agentId": "nna_cc86012aa9797005",
+      "digest": "d70de45c4425cdacee50360d0f0d1d12c71fe5b91bbe7122d4ad50864c21ce58"
+    }
+  ],
+  "reproducibility": {
+    "stable": [
+      "event chain replays",
+      "impulse is one of four words",
+      "secretLeak is false"
+    ],
+    "variable": [
+      "agentId",
+      "digest",
+      "impulse distribution",
+      "intentMatchRate"
+    ],
+    "reason": "init generates a new identity; deterministic and stochastic seeds include agentId."
+  },
+  "claimBoundary": "Synthetic fixture run for onboarding; it demonstrates the event-chain contract, not model intelligence or semantic labeling quality."
+}

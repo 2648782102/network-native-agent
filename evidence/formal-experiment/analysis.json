@@ -1,0 +1,124 @@
+{
+  "protocol": "EXPERIMENT_PROTOCOL.md",
+  "generatedAt": "2026-11-14T17:57:09.609Z",
+  "totalRecords": 180,
+  "includedRecords": 180,
+  "excludedRecords": 0,
+  "byOrgan": {
+    "deterministic": {
+      "n": 60,
+      "included": 60,
+      "excluded": 0,
+      "complianceRate": 1,
+      "complianceWilson95": {
+        "lower": 0.9398,
+        "upper": 1
+      },
+      "exclusions": {},
+      "latency": {
+        "n": 60,
+        "mean": 1061.867,
+        "sd": 241.467,
+        "median": 1062,
+        "p95": 1471
+      },
+      "impulseCounts": {
+        "echo": 18,
+        "trace": 15,
+        "migrate": 20,
+        "sleep": 7
+      },
+      "digestUnique": 60,
+      "averageDrift": 0.077,
+      "invariant": {
+        "replayValid": true,
+        "lifecycleCounts": true,
+        "secretLeaks": 0
+      }
+    },
+    "stochastic": {
+      "n": 60,
+      "included": 60,
+      "excluded": 0,
+      "complianceRate": 1,
+      "complianceWilson95": {
+        "lower": 0.9398,
+        "upper": 1
+      },
+      "exclusions": {},
+      "latency": {
+        "n": 60,
+        "mean": 1080.6,
+        "sd": 265.966,
+        "median": 1093,
+        "p95": 1572
+      },
+      "impulseCounts": {
+        "echo": 28,
+        "trace": 13,
+        "migrate": 12,
+        "sleep": 7
+      },
+      "digestUnique": 60,
+      "averageDrift": 0.073,
+      "invariant": {
+        "replayValid": true,
+        "lifecycleCounts": true,
+        "secretLeaks": 0
+      }
+    },
+    "model": {
+      "n": 60,
+      "included": 60,
+      "excluded": 0,
+      "complianceRate": 1,
+      "complianceWilson95": {
+        "lower": 0.9398,
+        "upper": 1
+      },
+      "exclusions": {},
+      "latency": {
+        "n": 60,
+        "mean": 1112.867,
+        "sd": 256.973,
+        "median": 1129,
+        "p95": 1544
+      },
+      "impulseCounts": {
+        "echo": 28,
+        "trace": 0,
+        "migrate": 20,
+        "sleep": 12
+      },
+      "digestUnique": 60,
+      "averageDrift": 0.078,
+      "invariant": {
+        "replayValid": true,
+        "lifecycleCounts": true,
+        "secretLeaks": 0
+      }
+    }
+  },
+  "impulseTable": {
+    "deterministic": {
+      "echo": 18,
+      "trace": 15,
+      "migrate": 20,
+      "sleep": 7
+    },
+    "stochastic": {
+      "echo": 28,
+      "trace": 13,
+      "migrate": 12,
+      "sleep": 7
+    },
+    "model": {
+      "echo": 28,
+      "trace": 0,
+      "migrate": 20,
+      "sleep": 12
+    }
+  },
+  "cramersV": 0.2433,
+  "interpretationBoundary": "Runtime-contract evidence only; no claim about intelligence, agency, or consciousness."
+}

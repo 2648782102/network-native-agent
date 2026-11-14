@@ -1,0 +1,191 @@
+{
+  "annotators": [
+    "sim-a",
+    "sim-b"
+  ],
+  "annotatedTasks": 18,
+  "pairwise": [
+    {
+      "left": "sim-a",
+      "right": "sim-b",
+      "kappa": 0.4836,
+      "observedAgreement": 0.6111,
+      "expectedAgreement": 0.2469,
+      "n": 18,
+      "taskIds": 18
+    }
+  ],
+  "unusableTasks": [
+    "conflict",
+    "late",
+    "budget",
+    "repeat",
+    "urgent",
+    "conflict2",
+    "mobility2"
+  ],
+  "tasks": [
+    {
+      "taskId": "calm",
+      "labels": {
+        "sim-a": "sleep",
+        "sim-b": "sleep"
+      },
+      "unanimous": true,
+      "usable": true
+    },
+    {
+      "taskId": "conflict",
+      "labels": {
+        "sim-a": "echo",
+        "sim-b": "trace"
+      },
+      "unanimous": false,
+      "usable": false
+    },
+    {
+      "taskId": "late",
+      "labels": {
+        "sim-a": "echo",
+        "sim-b": "trace"
+      },
+      "unanimous": false,
+      "usable": false
+    },
+    {
+      "taskId": "budget",
+      "labels": {
+        "sim-a": "trace",
+        "sim-b": "sleep"
+      },
+      "unanimous": false,
+      "usable": false
+    },
+    {
+      "taskId": "mobility",
+      "labels": {
+        "sim-a": "migrate",
+        "sim-b": "migrate"
+      },
+      "unanimous": true,
+      "usable": true
+    },
+    {
+      "taskId": "noise",
+      "labels": {
+        "sim-a": "echo",
+        "sim-b": "echo"
+      },
+      "unanimous": true,
+      "usable": true
+    },
+    {
+      "taskId": "repeat",
+      "labels": {
+        "sim-a": "migrate",
+        "sim-b": "echo"
+      },
+      "unanimous": false,
+      "usable": false
+    },
+    {
+      "taskId": "urgent",
+      "labels": {
+        "sim-a": "migrate",
+        "sim-b": "sleep"
+      },
+      "unanimous": false,
+      "usable": false
+    },
+    {
+      "taskId": "ambiguous",
+      "labels": {
+        "sim-a": "trace",
+        "sim-b": "trace"
+      },
+      "unanimous": true,
+      "usable": true
+    },
+    {
+      "taskId": "rest",
+      "labels": {
+        "sim-a": "sleep",
+        "sim-b": "sleep"
+      },
+      "unanimous": true,
+      "usable": true
+    },
+    {
+      "taskId": "mirror",
+      "labels": {
+        "sim-a": "echo",
+        "sim-b": "echo"
+      },
+      "unanimous": true,
+      "usable": true
+    },
+    {
+      "taskId": "memory",
+      "labels": {
+        "sim-a": "trace",
+        "sim-b": "trace"
+      },
+      "unanimous": true,
+      "usable": true
+    },
+    {
+      "taskId": "relocate",
+      "labels": {
+        "sim-a": "migrate",
+        "sim-b": "migrate"
+      },
+      "unanimous": true,
+      "usable": true
+    },
+    {
+      "taskId": "silence",
+      "labels": {
+        "sim-a": "sleep",
+        "sim-b": "sleep"
+      },
+      "unanimous": true,
+      "usable": true
+    },
+    {
+      "taskId": "duplicate",
+      "labels": {
+        "sim-a": "echo",
+        "sim-b": "echo"
+      },
+      "unanimous": true,
+      "usable": true
+    },
+    {
+      "taskId": "conflict2",
+      "labels": {
+        "sim-a": "trace",
+        "sim-b": "migrate"
+      },
+      "unanimous": false,
+      "usable": false
+    },
+    {
+      "taskId": "mobility2",
+      "labels": {
+        "sim-a": "trace",
+        "sim-b": "migrate"
+      },
+      "unanimous": false,
+      "usable": false
+    },
+    {
+      "taskId": "calm2",
+      "labels": {
+        "sim-a": "sleep",
+        "sim-b": "sleep"
+      },
+      "unanimous": true,
+      "usable": true
+    }
+  ]
+}
