@@ -1,0 +1,100 @@
+{
+  "valid": true,
+  "protocol": "anchor-v1",
+  "generatedAt": "2026-11-15T08:43:48.702Z",
+  "parameters": {
+    "events": 16,
+    "divergeAt": 9,
+    "forgedTailEvents": 7,
+    "logId": "log_f51f669ea7eeabfa"
+  },
+  "identity": {
+    "agentId": "nna_19f5190bff029779",
+    "logFingerprint": "f51f669ea7eeabfac4cc08be267a7bf790d8ba89ddd1ed25cd49afbf1a2ed68c"
+  },
+  "anchors": {
+    "honestRoot": "87771ce628e6a488e437ce8cb5b947ba713b3cb0858ef5655ebeca9ca85bdf4b",
+    "forgedRoot": "a9c678deeb963c6028a854bbb73ea1e24c368eed11d1b11553f38df29763be89",
+    "checkpoint": {
+      "size": 16,
+      "root": "87771ce628e6a488e437ce8cb5b947ba713b3cb0858ef5655ebeca9ca85bdf4b",
+      "headSeq": 16,
+      "headId": "184338b7b4f02c3d62ce6c1f4bf201ba52f8a0597d14898bc7662dd8175a6668"
+    }
+  },
+  "results": {
+    "forgedHistoryUnaudited": {
+      "anchored": false,
+      "detected": true,
+      "reason": "relay history does not match the anchored root"
+    },
+    "honestHistoryAudited": {
+      "anchored": true,
+      "valid": true,
+      "headMatches": true
+    },
+    "sizeRegression": {
+      "detected": true,
+      "reason": "relay served 5 events but the log anchors 16"
+    },
+    "impostorLog": {
+      "detected": true,
+      "reason": "checkpoint rejected: event 1: agentId does not match public key"
+    },
+    "inclusionProof": {
+      "index": 15,
+      "inForgedRegion": true,
+      "valid": true,
+      "forgedRejected": true,
+      "pathLength": 4
+    },
+    "prefixConsistency": {
+      "valid": true,
+      "oldCheckpointStillAudits": true
+    },
+    "growth": {
+      "oldSize": 16,
+      "newSize": 20
+    },
+    "grownCheckpointSize": 20
+  },
+  "claims": [
+    {
+      "claim": "A log checkpoint detects a forged history that is internally valid and identical for every reader.",
+      "status": "supported",
+      "evidence": "the relay history hashes to a different root than the anchored checkpoint"
+    },
+    {
+      "claim": "Cross-check and heartbeat are unnecessary when a checkpoint is available.",
+      "status": "supported",
+      "evidence": "the attack targeted here serves identical bytes to all readers, so reader-to-reader comparison cannot see it"
+    },
+    {
+      "claim": "Anchoring detects log truncation.",
+      "status": "supported",
+      "evidence": "fewer events than the anchored size is rejected before hashing"
+    },
+    {
+      "claim": "Anchoring detects a swapped log key.",
+      "status": "supported",
+      "evidence": "the impostor checkpoint fails signature verification against the pinned public key"
+    },
+    {
+      "claim": "A single event can be proven included without fetching the whole history.",
+      "status": "supported",
+      "evidence": "audit path of 4 hashes for 16 leaves"
+    },
+    {
+      "claim": "A checkpoint stays valid as the log grows.",
+      "status": "supported",
+      "evidence": "older root is a literal prefix of the newer tree"
+    }
+  ],
+  "limitations": [
+    "Prefix consistency is verified by recomputation, which is O(oldSize); a production log needs RFC 6962 consistency proofs.",
+    "The log operator is only trusted for append-only behaviour; a log that signs two different roots for the same size defeats a single reader, and requires witnesses or gossip to catch.",
+    "The checkpoint here is local and unpinned in any external medium; pinning must happen out of band to be meaningful.",
+    "This is a deterministic simulation. No public log, no network, no third-party service is contacted."
+  ],
+  "boundary": "Simulation only. No public transparency log, no network, no third-party writes."
+}

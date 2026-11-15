@@ -48,7 +48,8 @@
     "figures": "node scripts/render-figures.mjs",
     "sample:run": "node scripts/sample-run.mjs",
     "repo:labels": "node scripts/repo-labels.mjs",
-    "relay:trust": "node scripts/relay-trust-experiment.mjs"
+    "relay:trust": "node scripts/relay-trust-experiment.mjs",
+    "anchor": "node scripts/anchor-experiment.mjs"
   },
   "license": "MIT",
   "repository": {
