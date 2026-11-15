@@ -67,6 +67,8 @@ git commit -m "Initial public research release"
 - 确认 Actions 只运行测试与离线 demo，不使用仓库 Secrets 写入第三方系统；
 - 不把 relay 事件分支放进代码仓库。
 
+标签、Discussions 与安全开关无法通过 `git push` 同步。标签可用 `NNA_GITHUB_REPOSITORY=owner/repo GITHUB_TOKEN=... npm run repo:labels` 一次性创建；没有令牌时请在仓库 Labels 页面手动建 `dependencies`、`npm`、`github-actions`、`evidence`、`protocol`。
+
 ## 发布后声明
 
 公开仓库只提供可复现的运行时契约与离线实验。它不代表：
