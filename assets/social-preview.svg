@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="network-native-agent: a signed event chain carries identity, memory, death and resurrection">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0e14"/>
+      <stop offset="1" stop-color="#111923"/>
+    </linearGradient>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4f8cff"/>
+      <stop offset="1" stop-color="#4f8cff" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1b2532" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <rect width="1280" height="640" fill="url(#grid)" opacity="0.5"/>
+  <circle cx="1200" cy="560" r="260" fill="#4f8cff" opacity="0.05"/>
+
+  <g font-family="SF Mono, Menlo, monospace" fill="#6b7a8f" font-size="15" letter-spacing="2.4">
+    <text x="80" y="112">RESEARCH PROTOTYPE · v0.1.0</text>
+  </g>
+
+  <g font-family="Helvetica Neue, Arial, sans-serif" fill="#e8eef7">
+    <text x="78" y="206" font-size="66" font-weight="700" letter-spacing="-1.5">network-native-agent</text>
+  </g>
+
+  <rect x="80" y="240" width="132" height="3" fill="url(#rule)"/>
+
+  <g font-family="PingFang SC, Hiragino Sans GB, Helvetica Neue, Arial, sans-serif">
+    <text x="80" y="308" font-size="27" fill="#c3d0e2">Agent 的运行时不在进程里，而在网络事件链里。</text>
+    <text x="80" y="352" font-size="19" fill="#7f90a6">Identity, memory, death and resurrection are signed events, not process state.</text>
+  </g>
+
+  <g font-family="SF Mono, Menlo, monospace" font-size="16" fill="#7d8ea4">
+    <text x="80" y="500">73 tests · MIT · zero runtime dependencies</text>
+    <text x="80" y="530">npm test · npm run sample:run · npm run check</text>
+  </g>
+
+  <g font-family="SF Mono, Menlo, monospace" font-size="14">
+    <line x1="900" y1="188" x2="900" y2="492" stroke="#2b394b" stroke-width="2"/>
+
+    <circle cx="900" cy="188" r="7" fill="#4f8cff"/>
+    <text x="926" y="180" fill="#e8eef7">genesis</text>
+    <text x="926" y="202" fill="#68788e">ed25519 identity</text>
+
+    <circle cx="900" cy="262" r="7" fill="#4f8cff"/>
+    <text x="926" y="254" fill="#e8eef7">body A</text>
+    <text x="926" y="276" fill="#68788e">wake → pulse → memory</text>
+
+    <circle cx="900" cy="336" r="7" fill="#f97316"/>
+    <text x="926" y="328" fill="#e8eef7">death</text>
+    <text x="926" y="350" fill="#68788e">history survives the process</text>
+
+    <circle cx="900" cy="410" r="7" fill="#0d9488"/>
+    <text x="926" y="402" fill="#e8eef7">body B</text>
+    <text x="926" y="424" fill="#68788e">replay → same agentId</text>
+
+    <circle cx="900" cy="492" r="7" fill="#7c3aed"/>
+    <text x="926" y="488" fill="#e8eef7">lineage fork</text>
+    <text x="926" y="510" fill="#68788e">new identity, signed ancestry</text>
+  </g>
+</svg>
