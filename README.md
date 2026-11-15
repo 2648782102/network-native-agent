@@ -302,6 +302,7 @@ npm run env:reset
 - [CHANGELOG.md](CHANGELOG.md)：版本变更与已知限制。
 - [RELAY_TRUST.md](RELAY_TRUST.md)：不可信 relay 下的欺骗检测实验与代价曲线。
 - [ANCHORING.md](ANCHORING.md)：用透明日志锚定 head，堵住「对所有读者一致撒谎」的攻击。
+- [ADVERSARY.md](ADVERSARY.md)：对手模型账本——每种攻击由哪层拦截、代价多少、哪里还是空的。
 
 ## 状态
 

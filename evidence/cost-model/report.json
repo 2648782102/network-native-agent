@@ -1,0 +1,75 @@
+{
+  "valid": true,
+  "protocol": "cost-model-v1",
+  "generatedAt": "2026-11-15T09:10:35.485Z",
+  "note": "All numbers come from this script on this machine. They are lower bounds for a local CPU, not network or disk timings.",
+  "machine": {
+    "node": "v24.22.2",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "write": {
+    "signEvent": {
+      "medianMs": 0.187,
+      "p95Ms": 0.394
+    },
+    "signCheckpoint": {
+      "medianMs": 0.158,
+      "p95Ms": 0.306
+    }
+  },
+  "read": [
+    {
+      "events": 100,
+      "bytes": 49264,
+      "verifyChainMs": 12.105,
+      "merkleRootMs": 0.432,
+      "inclusionVerifyMs": 0.005,
+      "inclusionProofLength": 4
+    },
+    {
+      "events": 500,
+      "bytes": 246464,
+      "verifyChainMs": 54.504,
+      "merkleRootMs": 1.45,
+      "inclusionVerifyMs": 0.007,
+      "inclusionProofLength": 7
+    },
+    {
+      "events": 2000,
+      "bytes": 987966,
+      "verifyChainMs": 232.357,
+      "merkleRootMs": 5.222,
+      "inclusionVerifyMs": 0.006,
+      "inclusionProofLength": 9
+    },
+    {
+      "events": 5000,
+      "bytes": 2472966,
+      "verifyChainMs": 662.319,
+      "merkleRootMs": 13.528,
+      "inclusionVerifyMs": 0.005,
+      "inclusionProofLength": 7
+    }
+  ],
+  "storage": {
+    "bytesPerEvent": [
+      493,
+      493,
+      494,
+      495
+    ],
+    "note": "JSON with one synthetic perception per event; real events carry the same shape but larger text."
+  },
+  "observations": [
+    "Signature verification dominates: it is linear in event count and 30-40x the cost of the Merkle work at 5000 events.",
+    "Merkle root construction is cheap and grows slowly, so anchoring cost is not the bottleneck.",
+    "Inclusion verification stays under 15 ms at 5000 events with a 7-9 hash path.",
+    "Single-event write cost is sub-millisecond, so signing every event is not what makes a long run expensive."
+  ],
+  "limitations": [
+    "Local CPU only: no network round trip, no disk fsync, no GitHub API latency.",
+    "The chain is synthetic and in memory; a real run pays serialization and file I/O.",
+    "Measurement is wall-clock on a shared machine, so treat small differences as noise."
+  ]
+}
