@@ -290,7 +290,7 @@ npm run env:reset
 
 ## 状态
 
-`v0 / Phase 2 research sandbox`。仓库已完成公开前整理，等待单独确认后切换 GitHub 可见性；真实开放网络实验仍需单独决定。默认运行仍不调用模型。
+`v0 / Phase 2 research sandbox`。仓库已于 2026-11-15 公开，采用 MIT 许可；真实开放网络实验仍需单独决定。默认运行仍不调用模型。
 
 ## 参与与许可
 
