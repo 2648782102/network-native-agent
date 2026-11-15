@@ -71,8 +71,24 @@ export async function writeGenesisSummary(habitat, event) {
   await writeFile(paths.genesis, `${JSON.stringify(event, null, 2)}\n`, 'utf8');
 }
 
-export function verifyChain(events) {
+/**
+ * Verify an event chain.
+ *
+ * `skipSignatureBefore` lets a caller that already trusts a signed checkpoint
+ * skip only the expensive Ed25519 verification for events at or below that
+ * sequence number. The cheap checks (id recomputation, seq, parent linkage,
+ * event version, agentId derivation) always run for every event, so a tampered
+ * prefix is still caught. Skipping signatures is a performance trade-off, not a
+ * correctness shortcut.
+ */
+export function verifyChain(events, options = {}) {
   if (events.length === 0) return [];
+  const skipSignatureBefore = Number.isInteger(options.skipSignatureBefore)
+    ? options.skipSignatureBefore
+    : 0;
+  if (skipSignatureBefore < 0) {
+    throw new Error('skipSignatureBefore must be a non-negative integer');
+  }
   const genesis = events[0];
   if (genesis.type !== 'genesis' || genesis.seq !== 1 || genesis.parent !== null) {
     throw new Error('first event must be genesis with seq 1 and parent null');
@@ -83,7 +99,7 @@ export function verifyChain(events) {
   }
   let parent = null;
   return events.map((event, index) => {
-    verifyEvent(event, publicPem);
+    verifyEvent(event, publicPem, { skipSignature: event.seq <= skipSignatureBefore });
     if (event.seq !== index + 1) {
       throw new Error(`event ${event.seq}: expected seq ${index + 1}`);
     }

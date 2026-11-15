@@ -88,7 +88,7 @@ export function createEvent(privatePem, fields) {
   return { ...unsigned, id, signature };
 }
 
-export function verifyEvent(event, expectedPublicPem = null) {
+export function verifyEvent(event, expectedPublicPem = null, options = {}) {
   const unsigned = unsignedEvent(event);
   const id = hashText(canonicalJson(unsigned));
   if (id !== event.id) {
@@ -101,6 +101,9 @@ export function verifyEvent(event, expectedPublicPem = null) {
   const identity = identityFromPublicPem(publicPem);
   if (event.agentId !== identity.agentId) {
     throw new Error(`event ${event.seq}: agentId does not match public key`);
+  }
+  if (options.skipSignature === true) {
+    return event;
   }
   const valid = verify(
     null,

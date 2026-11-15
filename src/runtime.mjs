@@ -6,7 +6,9 @@ import {
   resolveCognitionName,
 } from './cognition.mjs';
 import {
+  createEvent,
   generateIdentity,
+  hashText,
   identityFromPrivatePem,
   makeBodyId,
 } from './crypto.mjs';
@@ -17,6 +19,7 @@ import {
   lastEvent,
   readEvents,
   readPrivatePem,
+  readRawEvents,
   verifyChain,
   writeGenesisSummary,
   writePrivatePem,
@@ -26,7 +29,7 @@ import {
   reconstruct,
   stateDigest,
 } from './state.mjs';
-import { createEvent } from './crypto.mjs';
+import { readCheckpoint, validateCheckpoint, writeCheckpoint } from './checkpoint.mjs';
 import {
   listRelayBranches,
   readRelayConfig,
@@ -545,7 +548,7 @@ export async function getTrace(habitat, last = 20) {
 }
 
 export async function replay(habitat, options = {}) {
-  const events = await readEvents(habitat);
+  const { events, verification } = await readEventsWithCheckpoint(habitat, options);
   const state = reconstruct(events);
   if (options.materialize !== false) {
     await materializeOutbox(habitat, events);
@@ -558,6 +561,65 @@ export async function replay(habitat, options = {}) {
     genesisId: events[0].id,
     lastEventId: lastEvent(events).id,
     materializedActions: events.filter((event) => event.type === 'action').length,
+    verification,
+  };
+}
+
+async function readEventsWithCheckpoint(habitat, options = {}) {
+  const raw = await readRawEvents(habitat);
+  if (raw.length === 0) return { events: [], verification: { mode: 'empty' } };
+
+  // A read-only observer has no identity.key; checkpoints are an optimization,
+  // so a habitat without a key simply always verifies in full.
+  const identity = options.privatePem ?? await readPrivatePem(habitat).catch((error) => {
+    if (error.code === 'ENOENT') return null;
+    throw error;
+  });
+  const mode = options.incremental === false ? 'full' : 'auto';
+
+  if (mode === 'auto') {
+    const checkpoint = await readCheckpoint(habitat);
+    const verdict = validateCheckpoint(checkpoint, raw, raw[0].agentId);
+    if (verdict.usable) {
+      const started = Date.now();
+      const events = verifyChain(raw, { skipSignatureBefore: verdict.size });
+      return {
+        events,
+        verification: {
+          mode: 'incremental',
+          checkpointSize: verdict.size,
+          recheckedSignatures: events.length - verdict.size,
+          skippedSignatures: verdict.size,
+          elapsedMs: Date.now() - started,
+        },
+      };
+    }
+  }
+
+  const started = Date.now();
+  const events = verifyChain(raw);
+  let checkpointWritten = false;
+  if (identity) {
+    const chainDigest = hashText(events.map((event) => event.id).join('\n'));
+    await writeCheckpoint(habitat, {
+      size: events.length,
+      headId: lastEvent(events).id,
+      headSeq: lastEvent(events).seq,
+      chainDigest,
+      privatePem: identity,
+    });
+    checkpointWritten = true;
+  }
+  return {
+    events,
+    verification: {
+      mode: 'full',
+      recheckedSignatures: events.length,
+      skippedSignatures: 0,
+      elapsedMs: Date.now() - started,
+      checkpointWritten,
+      checkpointSkippedReason: checkpointWritten ? null : 'habitat has no identity.key (read-only observer)',
+    },
   };
 }
 

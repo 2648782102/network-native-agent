@@ -1,0 +1,42 @@
+{
+  "valid": true,
+  "protocol": "incremental-verify-v1",
+  "generatedAt": "2026-11-15T09:27:46.407Z",
+  "note": "Local CPU only. The incremental path still recomputes every event id; it skips only Ed25519 verification for the checkpointed prefix.",
+  "rows": [
+    {
+      "events": 1000,
+      "fullVerifyMs": 128.4,
+      "incrementalVerifyMs": 22.6,
+      "speedup": 5.7,
+      "signaturesSkipped": 990,
+      "signaturesRechecked": 10
+    },
+    {
+      "events": 5000,
+      "fullVerifyMs": 911.1,
+      "incrementalVerifyMs": 131.3,
+      "speedup": 6.9,
+      "signaturesSkipped": 4950,
+      "signaturesRechecked": 50
+    },
+    {
+      "events": 10000,
+      "fullVerifyMs": 1800.7,
+      "incrementalVerifyMs": 242.4,
+      "speedup": 7.4,
+      "signaturesSkipped": 9900,
+      "signaturesRechecked": 100
+    }
+  ],
+  "interpretation": [
+    "Skipping signatures removes the dominant cost while keeping id recomputation, so prefix tampering is still caught.",
+    "The saving grows with history length because signature verification is linear in event count.",
+    "A checkpoint is only trusted after its own signature, size, head and subject are validated against the chain."
+  ],
+  "limitations": [
+    "No disk or network timings; both paths read from memory here.",
+    "The checkpoint must be stored somewhere a relay cannot rewrite, otherwise it proves nothing.",
+    "Skipping signatures trusts the checkpoint; a forged checkpoint is rejected, but a checkpoint signed by a stolen key is not detectable locally."
+  ]
+}
