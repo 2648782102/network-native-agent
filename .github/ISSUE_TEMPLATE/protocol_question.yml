@@ -1,0 +1,24 @@
+name: Research or protocol question
+description: Ask about the runtime contract, experiment design, or a claim in the evidence.
+labels: [question]
+body:
+  - type: input
+    id: doc
+    attributes:
+      label: Relevant document
+      description: Which file or section does this concern?
+      placeholder: FINDINGS.md § Current claims
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: State the claim or protocol step you want clarified, and why it matters.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Link the archived data or command output you are reasoning from.

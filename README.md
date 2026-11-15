@@ -299,6 +299,7 @@ npm run env:reset
 - [DECISIONS.md](DECISIONS.md)：关键架构决策。
 - [ACCEPTANCE.md](ACCEPTANCE.md)：v0 验收记录。
 - [PUBLICATION.md](PUBLICATION.md)：公开仓库前的审计、历史与设置清单。
+- [CHANGELOG.md](CHANGELOG.md)：版本变更与已知限制。
 
 ## 状态
 
