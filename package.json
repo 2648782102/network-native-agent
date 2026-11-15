@@ -47,7 +47,8 @@
     "audit:public": "node scripts/public-audit.mjs",
     "figures": "node scripts/render-figures.mjs",
     "sample:run": "node scripts/sample-run.mjs",
-    "repo:labels": "node scripts/repo-labels.mjs"
+    "repo:labels": "node scripts/repo-labels.mjs",
+    "relay:trust": "node scripts/relay-trust-experiment.mjs"
   },
   "license": "MIT",
   "repository": {

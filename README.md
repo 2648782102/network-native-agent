@@ -300,6 +300,7 @@ npm run env:reset
 - [ACCEPTANCE.md](ACCEPTANCE.md)：v0 验收记录。
 - [PUBLICATION.md](PUBLICATION.md)：公开仓库前的审计、历史与设置清单。
 - [CHANGELOG.md](CHANGELOG.md)：版本变更与已知限制。
+- [RELAY_TRUST.md](RELAY_TRUST.md)：不可信 relay 下的欺骗检测实验与代价曲线。
 
 ## 状态
 

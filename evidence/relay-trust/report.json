@@ -1,0 +1,144 @@
+{
+  "valid": true,
+  "protocol": "relay-trust-v1",
+  "generatedAt": "2026-11-15T07:38:55.602Z",
+  "parameters": {
+    "events": 24,
+    "forkSeq": 10,
+    "heartbeatEvery": 4,
+    "bodyAEvents": 3,
+    "bodyBEvents": 5
+  },
+  "identities": {
+    "agentId": "nna_50596831b7923da8",
+    "publicKeyFingerprint": "50596831b7923da816c3fee9fe2e4ce846c877b55ed5f057386e41af5ff81854"
+  },
+  "heads": {
+    "honest": {
+      "seq": 24,
+      "id": "1a2f5b3f981f263348d3004672a45f24ecdd7895eab6b4ba63bca54ca04b6283",
+      "at": "2026-11-15T00:00:24.000Z"
+    },
+    "viewA": {
+      "seq": 13,
+      "id": "16b4cab9f95415db9a8aaed7f52fadf68ef19cfeeb91fc67929b381bb270f4bc",
+      "at": "2026-11-15T01:00:13.000Z"
+    },
+    "viewB": {
+      "seq": 15,
+      "id": "0cb272054fe06532fa21c7e6734689aae1657350e3c23e973bf852addb959106",
+      "at": "2026-11-15T02:00:15.000Z"
+    },
+    "digests": {
+      "honest": "45ee89c0b49a52ec132bd8c3df7d6db7d57f9e22e2fc020f0df10d59a9f9d6ef",
+      "viewA": "b0599aeb0e18c49c0eee18ece3338e4fe4918961af16df8a4fe9ce97db223073",
+      "viewB": "3158e95d17fb1d478ec9ff59403ad136a8b183b91442012355a5c3ee63234454"
+    }
+  },
+  "results": {
+    "equivocation": {
+      "singleView": {
+        "detected": false,
+        "reasoning": "no comparison point: internal consistency does not imply uniqueness or freshness"
+      },
+      "crossCheck": {
+        "detected": true,
+        "divergenceAt": 11
+      },
+      "heartbeat": {
+        "detected": true,
+        "divergenceAt": 12,
+        "maxEventsHiddenBetweenExchanges": 3,
+        "checkpoints": 3
+      }
+    },
+    "withholding": {
+      "crossCheck": {
+        "detected": true,
+        "gap": 5
+      }
+    },
+    "rollback": {
+      "headComparison": {
+        "detected": true,
+        "head": {
+          "seq": 17,
+          "id": "902f5c04832cc8f2e108720c9562872224388c3c084b6291e42a30735c0faaab",
+          "at": "2026-11-15T00:00:17.000Z"
+        },
+        "knownHeadSeq": 24
+      }
+    }
+  },
+  "tradeoff": [
+    {
+      "heartbeatEvery": 1,
+      "exchangesBeforeDetection": 13,
+      "detectedAtSeq": 11,
+      "detectionLag": 0,
+      "maxEventsHiddenBetweenExchanges": 0
+    },
+    {
+      "heartbeatEvery": 2,
+      "exchangesBeforeDetection": 7,
+      "detectedAtSeq": 12,
+      "detectionLag": 1,
+      "maxEventsHiddenBetweenExchanges": 1
+    },
+    {
+      "heartbeatEvery": 4,
+      "exchangesBeforeDetection": 4,
+      "detectedAtSeq": 12,
+      "detectionLag": 1,
+      "maxEventsHiddenBetweenExchanges": 3
+    },
+    {
+      "heartbeatEvery": 8,
+      "exchangesBeforeDetection": 2,
+      "detectedAtSeq": 14,
+      "detectionLag": 3,
+      "maxEventsHiddenBetweenExchanges": 7
+    },
+    {
+      "heartbeatEvery": 16,
+      "exchangesBeforeDetection": 1,
+      "detectedAtSeq": 14,
+      "detectionLag": 3,
+      "maxEventsHiddenBetweenExchanges": 15
+    }
+  ],
+  "claims": [
+    {
+      "claim": "A single reader cannot detect equivocation from one internally valid chain.",
+      "status": "supported",
+      "evidence": "single-view strategy saw a valid chain with a valid signature and no comparison point"
+    },
+    {
+      "claim": "Two readers comparing heads detect a split view at the first diverging sequence.",
+      "status": "supported",
+      "evidence": "divergence first appears at seq 11"
+    },
+    {
+      "claim": "Heartbeat head exchange bounds how long a split view stays hidden.",
+      "status": "supported",
+      "evidence": "detected at heartbeat seq 12; at most 3 events can hide between exchanges, but the split itself began earlier"
+    },
+    {
+      "claim": "Withholding is invisible without an expected head, and visible with one.",
+      "status": "supported",
+      "evidence": "length gap 5; detection needs a second reference or a known head"
+    },
+    {
+      "claim": "A rollback is detectable only if the reader remembers a higher head.",
+      "status": "supported",
+      "evidence": "relay head 17 < known head 24"
+    }
+  ],
+  "limitations": [
+    "This is a deterministic simulation of relay behaviour, not a live network experiment.",
+    "Signatures prove authorship and integrity, not uniqueness or freshness.",
+    "Cross-check assumes readers can reach each other; a partitioned reader cannot.",
+    "Nothing here detects a relay that consistently serves one view to everyone."
+  ],
+  "boundary": "Simulation only. No public network, no third-party relay, no real model call."
+}
