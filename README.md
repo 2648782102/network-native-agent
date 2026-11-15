@@ -304,6 +304,7 @@ npm run env:reset
 - [ANCHORING.md](ANCHORING.md)：用透明日志锚定 head，堵住「对所有读者一致撒谎」的攻击。
 - [ADVERSARY.md](ADVERSARY.md)：对手模型账本——每种攻击由哪层拦截、代价多少、哪里还是空的。
 - [INCREMENTAL_VERIFY.md](INCREMENTAL_VERIFY.md)：检查点加速验证的实测收益与未解决部分。
+- [SOAK.md](SOAK.md)：200 轮持续运行的成本曲线，以及为什么增量验证没有压平它。
 
 ## 状态
 

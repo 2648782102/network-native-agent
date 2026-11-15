@@ -1,0 +1,117 @@
+{
+  "valid": true,
+  "protocol": "soak-v1",
+  "generatedAt": "2026-11-15T09:56:25.292Z",
+  "command": "npm run soak -- run --cycles 200",
+  "environment": {
+    "node": "v24.22.2",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "totals": {
+    "cycles": 200,
+    "events": 1001,
+    "bytes": 561369,
+    "failures": 0,
+    "wallClockMs": 114006,
+    "incrementalCycles": 199
+  },
+  "buckets": [
+    {
+      "cycles": 50,
+      "fromEvents": 6,
+      "toEvents": 251,
+      "replayMedianMs": 20.4,
+      "replayP95Ms": 40.28,
+      "wakeMedianMs": 25.97,
+      "cliMedianMs": 136.07,
+      "failures": 0
+    },
+    {
+      "cycles": 50,
+      "fromEvents": 256,
+      "toEvents": 501,
+      "replayMedianMs": 72.19,
+      "replayP95Ms": 166.62,
+      "wakeMedianMs": 83.38,
+      "cliMedianMs": 221.41,
+      "failures": 0
+    },
+    {
+      "cycles": 50,
+      "fromEvents": 506,
+      "toEvents": 751,
+      "replayMedianMs": 128.84,
+      "replayP95Ms": 201.52,
+      "wakeMedianMs": 128.78,
+      "cliMedianMs": 272.58,
+      "failures": 0
+    },
+    {
+      "cycles": 50,
+      "fromEvents": 756,
+      "toEvents": 1001,
+      "replayMedianMs": 156.34,
+      "replayP95Ms": 272.19,
+      "wakeMedianMs": 162.22,
+      "cliMedianMs": 301.6,
+      "failures": 0
+    }
+  ],
+  "checkpoints": [
+    {
+      "cycle": 1,
+      "events": 6,
+      "replayMs": 4.42,
+      "cliStatusMs": 89.33,
+      "mode": "full"
+    },
+    {
+      "cycle": 25,
+      "events": 126,
+      "replayMs": 24.28,
+      "cliStatusMs": 141.84,
+      "mode": "incremental"
+    },
+    {
+      "cycle": 50,
+      "events": 251,
+      "replayMs": 31.44,
+      "cliStatusMs": 137.73,
+      "mode": "incremental"
+    },
+    {
+      "cycle": 100,
+      "events": 501,
+      "replayMs": 78.39,
+      "cliStatusMs": 206.57,
+      "mode": "incremental"
+    },
+    {
+      "cycle": 150,
+      "events": 751,
+      "replayMs": 129.37,
+      "cliStatusMs": 231.88,
+      "mode": "incremental"
+    },
+    {
+      "cycle": 200,
+      "events": 1001,
+      "replayMs": 175.2,
+      "cliStatusMs": 323.43,
+      "mode": "incremental"
+    }
+  ],
+  "findings": [
+    "CLI invocation cost is a fixed ~100-300 ms and grows with history; in-process replay is far cheaper at the same event count.",
+    "Incremental verification avoided 199 of 200 full verifications, yet replay still grew from 4.4 ms to 175 ms because id recomputation is still linear.",
+    "No cycle failed: 200 inject+wake+replay cycles over 1001 events produced zero errors.",
+    "The dominant controllable cost for a long run is the O(n) id recomputation, not signature verification."
+  ],
+  "limitations": [
+    "Wall clock was about two minutes, not two weeks; nothing here measures day-scale drift, key rotation, or relay contention.",
+    "CPU only: no network, no GitHub relay, no fsync accounting.",
+    "Single machine, single process, deterministic cognition organ; model latency is excluded.",
+    "The soak log lives under work/ and is not committed; only this summary is archived."
+  ]
+}

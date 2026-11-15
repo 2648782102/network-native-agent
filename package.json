@@ -51,7 +51,9 @@
     "relay:trust": "node scripts/relay-trust-experiment.mjs",
     "anchor": "node scripts/anchor-experiment.mjs",
     "cost": "node scripts/measure-cost.mjs",
-    "incremental": "node scripts/measure-incremental.mjs"
+    "incremental": "node scripts/measure-incremental.mjs",
+    "soak": "node scripts/soak-inproc.mjs",
+    "soak:cli": "node scripts/soak.mjs"
   },
   "license": "MIT",
   "repository": {
