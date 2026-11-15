@@ -48,6 +48,18 @@ npm run sample:run
 
 样例只证明：事件链可重放、冲动是结构化四选一、密钥不写入事件。它不评测模型智能，也不代表语义标签质量。每次 `init` 都会生成新身份，而哈希型器官的种子包含 `agentId`，所以具体冲动与意图匹配率会随运行变化；归档报告只是其中一次运行，不应当作固定基准。
 
+## 关键证据
+
+模型接入没有改变默认决策。结构化合规率可以做到 100%，但语义意图只对上一半左右；因此默认认知器官仍是 `deterministic`。
+
+![结构化合规率与意图匹配率](evidence/figures/compliance-vs-intent.png)
+
+同一批任务下，三种认知器官产生的冲动分布明显不同，说明“换器官”改变的是行为轨迹，而不是事件链格式或生命周期语义：
+
+![三种认知器官的冲动分布](evidence/figures/impulse-distribution.png)
+
+完整报告与全部图表见 [MODEL_STABILITY_REPORT.md](MODEL_STABILITY_REPORT.md)、[FORMAL_EXPERIMENT_REPORT.md](FORMAL_EXPERIMENT_REPORT.md)、[MODEL_QUALIFICATION.md](MODEL_QUALIFICATION.md)。
+
 ## 直观版：这套研究到底在做什么
 
 **传统 Agent**：进程在，Agent 在；进程关掉，状态容易丢；换机器要复制文件。
